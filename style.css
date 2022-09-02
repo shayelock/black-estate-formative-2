@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani&family=Calistoga&display=swap');
+
+p {
+    font-family: 'biryani';
+}
+
+h1 { font-family: 'calistoga';
+}
+
+body {
+    margin: 0;
+    background-color: #18271F;
+    padding-top: 74px;
+}
+/* nav bar main */
+header {
+    position: fixed;
+    z-index: 9000;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: "Calistoga";
+    background-color: #f1efef;
+  }
+   
+  header a {
+    text-decoration: none;
+  }
+   
+  .nav-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    font-size: 18px;
+  }
+   
+  .nav-section .brand {
+    display: block;
+    width: 150px;
+    height: 100%;
+  }
+   
+  .nav-section > a {
+    color: #14281d;
+    position: relative;
+  }
+   
+ 
+  .nav-section > a:before {
+    width: 0;
+    transition: width 250ms ease;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -4px;
+  }
+   
+  .nav-section > a:hover::before {
+    border-bottom: 2px solid #14281d;
+    width: 100%;
+  }
+
+   
+  .nav-section .header-icon img {
+    height: 1.5em;
+    width: 1.5em;
+  }
+   
+  .nav-section .header-icon:hover {
+    transform: scale(1.2);
+  }
+
+  /* mobile nav */
+
+  #mobile-nav-open {
+    display: none;
+  }
+   
+  #mobile-nav-drawer {
+    display: none;
+  }
+   
+  .nav-section-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #14281d;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 74px;
+    min-width: 60vw;
+    z-index: 400;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    font-family: "Calistoga";
+  }
+  .nav-section-mobile a {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+/* mobile nav end  */
+
+/* nav icons */
+.logo-brand {
+    width: 130px;
+    height: 70px;
+    margin-top: 20px;
+}
+.header-icons {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+
+/* landing text */
+#landingimage .tagline {
+
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    gap: 24px; 
+    position: absolute;  
+    bottom: 20px; 
+    left: 20px; 
+    color: #F1F5F2;
+    font-family: "Calistoga";
+    font-size: clamp(0.2em,3vw,3em);
+  
+  }
+  #landingimage .tagline .award-circle {
+
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    flex: 0 0 auto;
+    padding: 16px; 
+    box-sizing: border-box; 
+    border: 3px solid #F1F5F2; 
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
+    font-size: 0.5em;
+  
+  }
+
+  /* background image  */
+  .img-wrap {
+    background-image: url(./resources/style/images/landingimage.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.6);
+  }
+
+
+   /* vineyard section */
+.flexgrid-vineyards {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#vineyards {
+    justify-content: center;
+}
+ 
+.flexgrid-vineyards img {
+    height: 25em;
+    width: 25em;
+    align-items: center;
+}
+.visit-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 20px;
+ }
+.sign-up {
+    padding: 10%;
+}
+.home-image {
+    padding: 2%;
+}
+.damsteep-image {
+    padding: 2%;
+}
+.netherwood-image {
+    padding: 2%;
+}
+
+.flexgrid-vineyards h1 {
+    color: white;
+    text-align: center;
+    text-decoration: underline white;
+}
+.flexgrid-visit-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    color:#18271F;
+    padding: 2%;
+    background-color: #F1F5F2;
+ 
+}
+
+/* visit page */
+.visit-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.visit-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* shop section */
+
+.flexgrid-shop {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+.shop {
+    align-items: center;
+}
+.winebottle-image {
+    height: 20em;
+    width: 20em;
+}
+.food-image {
+    height: 20em;
+    width: 20em;
+ }
+ .voucher-image {
+    height: 20em;
+    width: 20em;
+ }
+ .giftpack-image {
+    height: 20em;
+    width: 20em;
+}
+
+
+.flexgrid-shop h1 {
+    text-align: center;
+}
+
+.flexgrid-shop h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+.shop-heading {
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+/* member section */
+
+.member-info h1 {
+    color: #18271F;
+    font-size: 36px;
+}
+.member-info p {
+    color: #18271F;
+    font-size: 16px;
+    margin: 0px;
+
+}
+
+.member-image {
+    background-color: #F1F5F2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: 2%;
+}
+
+.member-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* footer section */
+
+.flexgrid-hours {
+    display: flex;
+    flex-direction: row;
+}
+.flexgrid-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.store-days p {
+    margin: 0%;
+    color: white;
+
+}
+.store-hours p {
+    margin: 0%;
+    color: white;
+  
+}
+.information {
+    display: flex;
+    flex-direction: column;
+}
+
+.information p {
+   margin: 0%;
+   color: white;
+}
+
+.information h1 {
+    color: white;
+ }
+
+ .information h2 {
+    margin: 0%;
+    color: white;
+ }
+.heading-form h1 {
+    color: white;
+}
+.heading-store-hours h1 {
+    color: white;
+}
+.social-media-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.copyright {
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+.facebook-image {
+     width: 30px;
+     height: 30px;
+}
+.insta-image {
+    width: 30px;
+    height: 30px;
+}
+.trip-image {
+    width: 45px;
+    height: 30px;
+}
+.footer-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 20px;
+ }
+
+ 
+
+
+
+
+@media only screen and (max-width: 991px) {
+
+    header .nav-section > a {
+        display: none;
+      }
+     
+      header .nav-section .logo-brand {
+        margin-right: auto;
+      }
+
+
+      /* code for displaying the drawer menu */
+      header .nav-section #mobile-nav-open {
+        display: block;
+      }
+
+      #mobile-nav-drawer:checked + .nav-section-mobile {
+        display: flex;
+        transform: translateX(0);
+      }
+
+  
+    .flexgrid-visit-page {
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 2%;
+    }
+    .visit-info {
+        order: 2;
+        padding: 16px;
+        text-align: center;
+        
+    }
+    .flexgrid-visit-image {
+        order: 1;
+    }
+
+.member-image {
+    grid-template-columns: 1fr;
+    gap: 0;
+    
+}
+.image-member {
+    order: 1;
+}
+.member-info {
+    order: 2;
+    text-align: center
+}
+
+.flexgrid-footer {
+    flex-direction: column;
+    align-items: left;
+    padding-left: 35%;
+}
+#landingimage .tagline .award-circle {
+    display: none;
+}
+}
+
+
+/* shop css */
+.shop-landing-img {
+    background-image: url(./resources/style/images/shoplanding.jpeg);
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .flexgrid-shop-links {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 36px;
+    padding: 3%;
+  }
+  .flexgrid-shop-links a {
+    color: white;
+  }
+
+#wine-shop {
+    background-color: #F1F5F2;
+}
+  .wine-icon {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 36px;
+  }
+  .our-wines h1 {
+    padding: 2%;
+    font-size: 36px;
+    color: #14281d;
+    text-align: center;
+    align-content: center;
+  }
+
+  .grid-wine-shop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color:#18271F;
+    gap: 2em;
+    justify-content: space-evenly;
+    padding: 5%;
+    background-color: #F1F5F2;
+}
+.grid-wine-shop h3 {
+    font-size: 1em;
+    color: #14281d;
+    text-decoration: underline #14281d;
+}
+.grid-wine-shop h3:hover {
+    color: #C59407;
+    text-decoration: underline #C59407;
+}
+
+
+.cart-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 1em;
+ }
+ input#qty {
+    width: 30px;
+    text-align: center;
+    margin-right: 20px;
+}
+.cart-button:hover {
+    background-color: goldenrod;
+    }
+.red-circle, .pink-circle, .white-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 42%;
+        right: 1%;
+        box-shadow: 0 1px 2.5px #000
+}
+
+    .red-circle {
+        background: #6b0f1a;
+    }
+    
+    .pink-circle {
+        background: rgb(244, 164, 194);
+    }
+    
+    .white-circle {
+        background: rgb(233, 213, 167);
+    }
+    .wine-container {
+        position: relative;
+    }
+
+.vineyard-img-wrap {
+    background-image: url(./resources/style/images/vineyardlanding.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .landing-image-h1 {
+    color: white;
+    text-align: center;
+    padding-top: 80%;
+  }
+
+  .flex-buttons {
+  position: absolute;
+ top: 55%;
+ left: 35%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 20%;
+
+  }
+
+  .home-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 1em;
+  }
+
+
+  .damsteep-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 1em;
+  }
+
+
+  .netherwood-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 1em;
+  }
+
+.vineyard-landing-image {
+    position: relative;
+}
+
+.vineyard-heading {
+    position: absolute;
+    top: 30%;
+    left: 42%; 
+    font-size: 2em;;
+}
+
+.flex-home-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-wine-home {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 3%;
+}
+
+.home-info h1 {
+    color: white;
+    font-size: 2em;
+    margin-top: 0%;
+}
+.home-info p {
+    color: white;
+}
+.home-info h2 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0%;
+}
+.home-info a {
+    color: white;
+    text-decoration: underline white;
+    font-size: 1em;
+}
+.home-info {
+    flex: 2;
+    margin-top: 3%;
+}
+.home-image-section {
+    flex: 1;
+  
+}
+.flex-wine-home img {
+    height: 12em;
+    width: 12em;
+    object-fit: cover;
+    flex: 1;
+}
+.flex-wine-home p {
+    font-size: 0.8em;
+}
+
+
+.home-image-section img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 3%;
+}
+
+.h-image {
+    height: auto;
+    width: 100%;
+}
+
+.home-text {
+    padding: 5%;
+}
+.home-image-section {
+    padding-top: 3%;
+    justify-content: center;
+}
+
+/* damsteep */
+.flex-damsteep-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #F1F5F2;
+}
+
+.flex-wine-damsteep {
+    display: flex;
+    flex-direction: row;  
+    flex-wrap: wrap;
+    gap: 2em;
+    
+}
+
+.damsteep-info h1 {
+    color: black;
+    font-size: 2em;
+    margin-top: 0%;
+}
+.damsteep-info p {
+    color: black;
+}
+.damsteep-info h2 {
+    color: black;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0%;
+}
+.damsteep-info a {
+    color: black;
+    text-decoration: underline white;
+    font-size: 1em;
+}
+.damsteep-info {
+    flex: 1;
+    margin-top: 3%;
+}
+.damsteep-image-section {
+    flex: 1;
+  
+}
+.flex-wine-damsteep img {
+    height: 12em;
+    width: 12em;
+    object-fit: cover;
+}
+.flex-wine-damsteep p {
+    font-size: 0.8em;
+}
+
+
+.damsteep-image-section img {
+    height: 80%;
+    width: 90%;
+    object-fit: cover;
+    padding-left: 0%;
+
+}
+.damsteep-text {
+    padding-right: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 0%;
+}
+.damsteep-image-section {
+    padding-top: 3%;
+    padding-left: 3%;
+    justify-content: center;
+}
+
+
+.wine-button {
+    background-color: #c59407;
+    border: #9f7703 1px solid;
+    color: #F1F5F2;
+    border-radius: 2em;
+    font-family: "calistoga";
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    box-shadow: 1px 1px 4px 0 black;
+    font-size: 1em; 
+}
+
+
+
+/* for tablet screen vineyard page */
+@media only screen and (max-width: 991px) {
+    
+    .vineyard-heading {
+        top: 30%;
+        left: 32%;  
+    }
+   .flex-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    top: 50%;
+    left: 40%; 
+   }
+
+   .flex-home-section {
+    display: flex;
+    flex-direction: column-reverse;
+   }
+
+
+   .flex-damsteep-section {
+    display: flex;
+    flex-direction: column;
+   }
+}
